@@ -272,7 +272,7 @@
  * PC2  - SPI2 MISO, AF5, push-pull
  * PC3  - SPI2 MOSI, AF5, input floating / input pull-up
  * PC4  - AN3, open drain + pull-up
- * PC5  - AN5, open drain + pull-up
+ * PC5  - AN4, open drain + pull-up
  * PC6  - PWM5, AF3, push-pull
  * PC7  - PWM6, AF3, push-pull
  * PC8  - IMU GPIO1, GPIO, push-pull
@@ -284,12 +284,12 @@
  * PC14 - NC
  * PC15 - NC
  */
-#define VAL_GPIOC_MODER             (PIN_MODE_INPUT(0)    | \
-                                     PIN_MODE_INPUT(1)   | \
+#define VAL_GPIOC_MODER             (PIN_MODE_ANALOG(0)    | \
+                                     PIN_MODE_ANALOG(1)   | \
                                      PIN_MODE_ALTERNATE(2)   | \
                                      PIN_MODE_ALTERNATE(3) | \
-                                     PIN_MODE_INPUT(4) | \
-                                     PIN_MODE_INPUT(5) | \
+                                     PIN_MODE_ANALOG(4) | \
+                                     PIN_MODE_ANALOG(5) | \
                                      PIN_MODE_ALTERNATE(6) | \
                                      PIN_MODE_ALTERNATE(7) | \
                                      PIN_MODE_OUTPUT(8)   | \
@@ -320,12 +320,12 @@
 
 #define VAL_GPIOC_OSPEEDR           0xFFFFFFFF /* All pins 100MHz */
 
-#define VAL_GPIOC_PUPDR             (PIN_PUDR_PULLUP(0)    | \
-                                     PIN_PUDR_PULLUP(1)    | \
+#define VAL_GPIOC_PUPDR             (PIN_PUDR_FLOATING(0)    | \
+                                     PIN_PUDR_FLOATING(1)    | \
                                      PIN_PUDR_FLOATING(2)    |	\
                                      PIN_PUDR_FLOATING(3)    |	\
-                                     PIN_PUDR_PULLUP(4)    | \
-                                     PIN_PUDR_PULLUP(5)    | \
+                                     PIN_PUDR_FLOATING(4)    | \
+                                     PIN_PUDR_FLOATING(5)    | \
                                      PIN_PUDR_PULLDOWN(6)    | \
                                      PIN_PUDR_PULLDOWN(7)    | \
                                      PIN_PUDR_FLOATING(9)    | \

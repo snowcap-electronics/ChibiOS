@@ -147,6 +147,7 @@ caddr_t _sbrk_r(struct _reent *r, int incr)
   }
   return (caddr_t)p;
 #else
+  (void)incr;
   __errno_r(r) = ENOMEM;
   return (caddr_t)-1;
 #endif
